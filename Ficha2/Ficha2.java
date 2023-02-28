@@ -56,12 +56,10 @@ public class Ficha2
         if (N< Y)
         {
             int pos= 0;
-            int r[]= new int[10];
+            int r[]= new int [N];
             for (int i=0 ; i< N; i++)
-            {
                 if (exists (b, a[i]))
-                    r= push (r, pos++, a[i]); 
-            }
+                    r[pos++]= a[i];
             if (pos!= r.length)
             {
                 int temp[]= Arrays.copyOf(r, pos);
@@ -70,6 +68,19 @@ public class Ficha2
             return r;
         }
         else
-            return null;
+        {
+
+            int pos= 0;
+            int r[]= new int [Y];
+            for (int i=0 ; i< Y; i++)
+                if (exists (a, b[i]))
+                    r[pos++]= b[i];
+            if (pos!= r.length)
+            {
+                int temp[]= Arrays.copyOf(r, pos);
+                r= temp;
+            }
+            return r;
+        }        
     }
 }
