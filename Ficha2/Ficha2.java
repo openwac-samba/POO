@@ -11,16 +11,6 @@ public class Ficha2
         }
         return false;
     }
-    private int[] push (int a[], int pos, int x)
-    {
-        if (pos== a.length)
-        {
-            int[] r= Arrays.copyOf (a, a.length* 2);
-            a= r;
-        }
-        a[pos]= x;
-        return a;
-    }
     //API
     public int max (int[] a, int N)
     {
