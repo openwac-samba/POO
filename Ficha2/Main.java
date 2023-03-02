@@ -40,6 +40,10 @@ public class Main
             b[i]= input.nextInt();
         return "Os valores em comum são: "+ Arrays.toString(ficha.cross(a, N, b, Y));
     }
+    private static String ex4 (Scanner input)
+    {
+
+    }
     public static void main (String[] args)
     {
         if (args.length== 0)
@@ -63,7 +67,7 @@ public class Main
                 s= ex3 (ficha, input);
                 break;
             case 4:
-                s= ex4 (ficha, input);
+                s= ex4 (input);
                 break;
             default:
                 break;
